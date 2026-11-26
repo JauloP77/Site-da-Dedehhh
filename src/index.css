@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 45% 98%;
+    --foreground: 217 60% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 217 60% 18%;
+    --primary: 217 60% 18%;
+    --primary-foreground: 42 45% 98%;
+    --secondary: 214 55% 93%;
+    --secondary-foreground: 217 60% 18%;
+    --muted: 40 30% 94%;
+    --muted-foreground: 217 20% 45%;
+    --accent: 43 93% 85%;
+    --accent-foreground: 217 60% 18%;
+    --border: 217 20% 88%;
+    --ring: 215 55% 48%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  body {
+    @apply font-sans;
+  }
+}
+
+.bg-hero {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(248, 198, 70, 0.22), transparent 42%),
+    radial-gradient(circle at 12% 75%, rgba(127, 169, 214, 0.22), transparent 45%),
+    linear-gradient(180deg, #fbf7ef 0%, #ffffff 100%);
+}
+
+.placeholder-slot {
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(19, 41, 75, 0.03),
+      rgba(19, 41, 75, 0.03) 12px,
+      rgba(248, 198, 70, 0.09) 12px,
+      rgba(248, 198, 70, 0.09) 24px
+    );
+  border: 2px dashed rgba(19, 41, 75, 0.18);
+}
