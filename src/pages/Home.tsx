@@ -162,7 +162,7 @@ function Hero() {
         <div>
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border bg-card/70 px-4 py-1.5 text-sm font-medium backdrop-blur">
-              <Sparkles className="h-4 w-4 text-sun" /> Aulas particulares de inglês
+              <Sparkles className="h-4 w-4 text-ring" /> Aulas particulares de inglês
             </span>
           </Reveal>
           <Reveal delay={0.1}>
@@ -225,7 +225,6 @@ function SectionHead({
   kicker,
   title,
   text,
-  light,
 }: {
   kicker: string;
   title: string;
@@ -234,13 +233,11 @@ function SectionHead({
 }) {
   return (
     <Reveal className="mx-auto mb-14 max-w-2xl text-center">
-      <span className={`text-sm font-bold uppercase tracking-[0.2em] ${light ? "text-sun" : "text-ring"}`}>
+      <span className="text-sm font-bold uppercase tracking-[0.2em] text-ring">
         {kicker}
       </span>
       <h2 className="mt-3 text-4xl font-semibold sm:text-5xl">{title}</h2>
-      {text && (
-        <p className={`mt-4 text-lg ${light ? "text-primary-foreground/75" : "text-muted-foreground"}`}>{text}</p>
-      )}
+      {text && <p className="mt-4 text-lg text-muted-foreground">{text}</p>}
     </Reveal>
   );
 }
@@ -318,10 +315,9 @@ function Classes() {
     { icon: Clock, title: "Duração", value: site.classes.duration },
   ];
   return (
-    <section id="aulas" className="relative bg-navy py-24 text-primary-foreground sm:py-32">
+    <section id="aulas" className="relative bg-gradient-to-b from-[#FCE1EC] to-[#F7E8FA] py-24 text-foreground sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHead
-          light
           kicker="Como funcionam"
           title="Aulas feitas para você"
           text="Cada detalhe pensado para que seu aprendizado seja leve, consistente e prazeroso."
@@ -337,20 +333,20 @@ function Classes() {
             <motion.div
               key={c.title}
               variants={staggerChild}
-              className="group rounded-3xl border border-primary-foreground/10 bg-primary-foreground/5 p-8 backdrop-blur transition duration-500 hover:-translate-y-2 hover:bg-primary-foreground/10"
+              className="group rounded-3xl border border-white/80 bg-white/75 p-8 shadow-soft backdrop-blur transition duration-500 hover:-translate-y-2 hover:bg-white/95"
             >
               <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sun text-foreground transition duration-500 group-hover:rotate-6 group-hover:scale-110">
                 <c.icon className="h-6 w-6" />
               </span>
               <h3 className="mt-6 text-2xl font-semibold">{c.title}</h3>
-              <p className="mt-2 text-primary-foreground/70">{c.value}</p>
+              <p className="mt-2 text-muted-foreground">{c.value}</p>
             </motion.div>
           ))}
         </motion.div>
         <Reveal delay={0.2} className="mt-14 text-center">
           <a
             href="#experimental"
-            className="group inline-flex items-center gap-2 rounded-full bg-sun px-7 py-4 font-semibold text-foreground transition hover:-translate-y-1 hover:shadow-lift"
+            className="group inline-flex items-center gap-2 rounded-full bg-navy px-7 py-4 font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-1 hover:shadow-lift"
           >
             Quero experimentar uma aula <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
           </a>
@@ -478,12 +474,12 @@ function Contact() {
   return (
     <section id="contato" className="py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <Reveal className="overflow-hidden rounded-[2.5rem] bg-navy px-6 py-16 text-center text-primary-foreground shadow-lift sm:px-16">
-          <span className="text-sm font-bold uppercase tracking-[0.2em] text-sun">Contato</span>
+        <Reveal className="overflow-hidden rounded-[2.5rem] border border-white/80 bg-gradient-to-br from-[#FADCE8] via-[#FCE7F1] to-[#EFE2FA] px-6 py-16 text-center text-foreground shadow-lift sm:px-16">
+          <span className="text-sm font-bold uppercase tracking-[0.2em] text-ring">Contato</span>
           <h2 className="mx-auto mt-3 max-w-2xl text-4xl font-semibold sm:text-5xl">
             Ready to start? Vamos conversar!
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-primary-foreground/75">
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Tire suas dúvidas, conte seus objetivos e descubra o plano ideal para você. Será um prazer te ajudar.
           </p>
           <motion.div
@@ -500,11 +496,11 @@ function Contact() {
                 href={l.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 p-6 transition hover:-translate-y-1 hover:bg-primary-foreground/10"
+                className="group rounded-2xl border border-white/80 bg-white/75 p-6 shadow-soft transition hover:-translate-y-1 hover:bg-white/95"
               >
-                <l.icon className="mx-auto h-7 w-7 text-sun transition group-hover:scale-110" />
+                <l.icon className="mx-auto h-7 w-7 text-ring transition group-hover:scale-110" />
                 <p className="mt-3 font-semibold">{l.label}</p>
-                <p className="truncate text-sm text-primary-foreground/70">{l.value}</p>
+                <p className="truncate text-sm text-muted-foreground">{l.value}</p>
               </motion.a>
             ))}
           </motion.div>
@@ -512,7 +508,7 @@ function Contact() {
             href={whatsappLink()}
             target="_blank"
             rel="noreferrer"
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-sun px-8 py-4 font-semibold text-foreground transition hover:-translate-y-1 hover:shadow-lift"
+            className="mt-10 inline-flex items-center gap-2 rounded-full bg-navy px-8 py-4 font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-1 hover:shadow-lift"
           >
             <MessageCircle className="h-5 w-5" /> Falar comigo agora
           </a>
