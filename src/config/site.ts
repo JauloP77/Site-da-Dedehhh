@@ -12,11 +12,11 @@ export const site = {
     education:
       "Graduada em Letras – Inglês e Literaturas Inglesas pela Universidade Federal de Santa Maria (UFSM, 2021–2024).",
     experience:
-      "Instrutora na Wizard, monitora do Projeto Línguas no Campus (LabLeR/UFSM) e Projeto LIKids, professora bilíngue (método Montessoriano) na Escola Eu Adoto Montessori e atualmente professora bilíngue no Colégio Santanna.",
+      "Instrutora na Wizard, monitora do Projeto Línguas no Campus (LabLeR/UFSM) e Projeto LIKids, professora bilíngue (método Montessoriano) na Escola Eu Adoto Montessori, professora bilíngue no Colégio Santanna.",
     certifications:
       "Formação em Ensino Bilíngue e Multilíngue pela UFSM e pela Universidade Estadual de Londrina (UEL), além de formação completa em Língua Inglesa pela Flash English.",
     methodology:
-      "Aulas dinâmicas, leves e focadas em comunicação real, unindo abordagem CLIL (Integração de Conteúdo e Língua), vocabulário do dia a dia e atividades personalizadas para o seu objetivo.",
+      "Aulas dinâmicas, leves e focadas em comunicação real, vocabulário do dia a dia e atividades personalizadas para o seu objetivo.",
   },
   classes: {
     modality: "Exclusivamente online, com aulas ao vivo de onde você estiver",
