@@ -382,7 +382,13 @@ const preFields: Field[] = [
   { name: "whatsapp", label: "WhatsApp", type: "tel", required: true, placeholder: "(00) 00000-0000" },
   { name: "guardian_name", label: "Nome do responsável (se menor de idade)", full: true },
   { name: "level", label: "Qual é seu nível de inglês?", type: "select", options: LEVELS, required: true },
-  { name: "modality", label: "Qual modalidade prefere?", type: "select", options: ["Online", "Presencial"], required: true },
+  {
+    name: "modality",
+    label: "Formato preferido (aulas 100% online)",
+    type: "select",
+    options: ["Online — Individual", "Online — Em dupla / pequeno grupo"],
+    required: true,
+  },
   { name: "goal", label: "Qual é seu principal objetivo ao aprender inglês?", required: true, full: true },
   {
     name: "availability",
